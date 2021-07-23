@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/serhiy2000/gl-js-homework/issues"
   },
-  "homepage": "https://serhiy2000.github.io/gl-js-homework",
+  "homepage": "https://serhiy2000.github.io/gl-js-homework/",
   "devDependencies": {
     "gh-pages": "^3.2.3"
   }
