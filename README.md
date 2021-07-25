@@ -1,4 +1,4 @@
-### gl-js-group
+### gl-js-group modified by SP
 
 # Перед началом работы
 
