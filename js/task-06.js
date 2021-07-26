@@ -15,6 +15,6 @@ do {
 	if (!isNaN(input)) {
 		total += input;
 	}
-} while (answer === null);
+} while (input === null);
 
 alert('The sume of entered figures = ' + total);
