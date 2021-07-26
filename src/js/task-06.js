@@ -12,9 +12,9 @@ let total = 0;
 
 do {
 	input = prompt('Input a number');
-	if (!isNaN(input)) {
-		total += input;
+	if (input !== null && !isNaN(input)) {
+		total += Number.parseInt(input, 10);
 	}
-} while (input === null);
+} while (input !== null);
 
 alert('The sume of entered figures = ' + total);
