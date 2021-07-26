@@ -10,7 +10,7 @@
 const total = 100;
 const ordered = [50, 80, 130];
 
-for (let i = 0; i < ordered.length(); i++) {
+for (let i = 0; i < ordered.length; i++) {
 	if (ordered[i] <= total) {
 		console.log('Order is received. Manager will contact you soon.');
 	} else {
