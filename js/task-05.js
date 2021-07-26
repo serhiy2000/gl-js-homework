@@ -14,3 +14,37 @@
 // Ямайка - 120 кредитов
 
 console.log('==== task 05 ====');
+
+let answer = prompt('Enter delivery country');
+let country, deliverPrice;
+
+switch (answer.toLowerCase()) {
+	case 'china':
+		country = 'China';
+		deliverPrice = 100;
+		break;
+	case 'chile':
+		country = 'Chile';
+		deliverPrice = 250;
+		break;
+	case 'austalia':
+		country = 'Australia';
+		deliverPrice = 170;
+		break;
+	case 'india':
+		country = 'India';
+		deliverPrice = 80;
+		break;
+	case 'jamaica':
+		country = 'Jamaica';
+		deliverPrice = 120;
+		break;
+	default:
+		country = 'unknown';
+}
+
+if (country !== 'unknown') {
+	alert('Delivery to ' + country + ' will cost ' + deliverPrice + '.');
+} else {
+	alert('Delivery to your country (' + country + ') is impossible.');
+}
