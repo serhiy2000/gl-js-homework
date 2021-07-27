@@ -4,7 +4,7 @@
 // Нумерация должна начинаться с 1. К примеру для первого элемента массива ['Mango', 'Poly', 'Ajax'] с индексом 0 будет выведено '1 - Mango', а для индекса 2 выведет '3 - Ajax'.
 
 const logItems = function (array) {
-	for (item in array) {
+	for (let item in array) {
 		console.log(parseInt(item) + 1 + ' - ' + array[item]);
 	}
 };

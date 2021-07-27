@@ -20,7 +20,7 @@ do {
 	}
 } while (input !== null);
 
-for (number of numbers) {
+for (let number of numbers) {
 	total += number;
 }
 console.log('Total sum = ' + total);
