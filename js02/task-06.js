@@ -15,7 +15,7 @@ do {
 		if (isNaN(input)) {
 			alert('Not a number');
 		} else {
-			numbers.push[input];
+			numbers.push[parseInt(input)];
 		}
 	}
 } while (input !== null);

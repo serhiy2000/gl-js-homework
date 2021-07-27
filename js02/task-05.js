@@ -8,6 +8,7 @@ const checkForSpam = function (message) {
 	}
 	return false;
 };
+console.log('==== task 2.05 ====');
 
 /*
  * Вызовы функции для проверки работоспособности твоей реализации.
