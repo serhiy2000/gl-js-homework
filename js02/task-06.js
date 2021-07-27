@@ -12,7 +12,7 @@ let total = 0;
 do {
 	input = prompt('Input a number');
 	if (input !== null) {
-		if (!isNaN(input)) {
+		if (isNaN(input)) {
 			alert('Not a number');
 		} else {
 			numbers.push[input];
