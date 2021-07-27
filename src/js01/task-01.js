@@ -9,7 +9,7 @@
 console.log('==== task 01 ====');
 
 let price = 1000;
-let name = 'Генератор защитного поля';
-console.log("Selected: " + name + ". Price: " + price);
+let name = 'Generator of protective shield';
+console.log('Selected: ' + name + '. Price: ' + price);
 price = 2000;
 console.log('Selected: ${name}. Price: ${price}');
