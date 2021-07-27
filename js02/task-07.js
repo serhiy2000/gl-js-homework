@@ -24,24 +24,49 @@
 // isLoginUnique только проверяет есть ли такой логин в массиве и возвращает true или false.
 // isLoginValid только проверяет валидный ли логин и возвращает true или false.
 // addLogin добавляет или не добавляет логин в массив. При этом для проверок условия добавления использует результаты вызовов других функций - isLoginUnique и isLoginValid.
-// const logins = ['Mango', 'robotGoogles', 'Poly', 'Aj4x1sBozz', 'qwerty123'];
 
-// const isLoginValid = function(login) {
-//   // твой код
-// };
+console.log('==== task 2.07* ====');
 
-// const isLoginUnique = function(allLogins, login) {
-//   // твой код
-// };
+let logins = ['Mango', 'robotGoogles', 'Poly', 'Aj4x1sBozz', 'qwerty123'];
 
-// const addLogin = function(allLogins, login) {
-//   // твой код
-// };
+const isLoginValid = function (login) {
+	if (login.length < 14 && login.length > 4) {
+		return true;
+	} else {
+		return false;
+	}
+};
+
+const isLoginUnique = function (allLogins, login) {
+	for (let item of allLogins) {
+		if (item.toLowerCase() === login.toLowerCase()) {
+			return false;
+		}
+	}
+	return true;
+};
+
+const addLogin = function (allLogins, login) {
+	let reply = {};
+	console.log('Adding: ' + login + ' ...');
+	reply.isUnique = isLoginUnique(allLogins, login);
+	reply.isValid = isLoginValid(login);
+
+	if (reply.isUnique && reply.isValid) {
+		logins.push(login);
+		return 'Sucessully added!';
+	} else if (!reply.isValid) {
+		return 'Login should be 4-16 charachters long!';
+	} else if (!reply.isUnique) {
+		return 'Login is already registered!';
+	}
+};
 
 // /*
 //  * Вызовы функции для проверки работоспособности твоей реализации.
 //  */
-// console.log(addLogin(logins, 'Ajax')); // 'Логин успешно добавлен!'
-// console.log(addLogin(logins, 'robotGoogles')); // 'Такой логин уже используется!'
-// console.log(addLogin(logins, 'Zod')); // 'Ошибка! Логин должен быть от 4 до 16 символов'
-// console.log(addLogin(logins, 'jqueryisextremelyfast')); // 'Ошибка! Логин должен быть от 4 до 16 символов'
+console.log(addLogin(logins, 'Ajax')); // 'Логин успешно добавлен!'
+console.log(addLogin(logins, 'robotGoogles')); // 'Такой логин уже используется!'
+console.log(addLogin(logins, 'Zod')); // 'Ошибка! Логин должен быть от 4 до 16 символов'
+console.log(addLogin(logins, 'jqueryisextremelyfast')); // 'Ошибка! Логин должен быть от 4 до 16 символов'
+console.log('Logins:' + logins);
