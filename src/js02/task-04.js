@@ -10,6 +10,7 @@ const formatString = function (string) {
 		return string.slice(0, 39) + '…';
 	}
 };
+console.log('==== task 2.04 ====');
 
 /*
  * Вызовы функции для проверки работоспособности твоей реализации.
