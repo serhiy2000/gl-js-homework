@@ -3,7 +3,7 @@
 
 const checkForSpam = function (message) {
 	message = message.split(' ');
-	for (each of message) {
+	for (let each of message) {
 		if (each === 'spam' || each === 'sale') return true;
 	}
 	return false;
