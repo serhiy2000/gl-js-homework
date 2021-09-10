@@ -164,9 +164,13 @@ console.log('==== task 6.05 ====');
 // Получить пользоваля (не массив) по email (поле email, он уникальный).
 
 const getUserWithEmail = (users, email) => {
+	let result;
 	users.forEach(function (user) {
-		if (user.email === email) return user;
+		if (user.email === email) {
+			result = user;
+		}
 	});
+	return result;
 };
 
 console.log(getUserWithEmail(users, 'shereeanthony@kog.com')); // {объект пользователя Sheree Anthony}
@@ -179,7 +183,7 @@ console.log('==== task 6.06 ====');
 const getUsersWithAge = (users, min, max) => {
 	let result = [];
 	users.forEach(function (user) {
-		if (user.Age > min && user.Age < max) {
+		if (user.age > min && user.age < max) {
 			result.push(user);
 		}
 	});
@@ -214,7 +218,7 @@ const getUsersWithFriend = (users, friendName) => {
 	users.forEach(function (user) {
 		if (
 			user.friends.some(function (friend) {
-				friend === friendName;
+				return friend === friendName;
 			})
 		) {
 			result.push(user.name);
@@ -225,13 +229,17 @@ const getUsersWithFriend = (users, friendName) => {
 
 console.log(getUsersWithFriend(users, 'Briana Decker')); // [ 'Sharlene Bush', 'Sheree Anthony' ]
 console.log(getUsersWithFriend(users, 'Goldie Gentry')); // [ 'Elma Head', 'Sheree Anthony' ]
-/*
+
 // Задание 9
 console.log('==== task 6.09 ====');
 // Массив имен (поле name) людей, отсортированных в зависимости от количества их друзей (поле friends)
 
 const getNamesSortedByFriendsCount = (users) => {
-	// твой код
+	let result = [];
+	users
+		.sort((a, b) => a.friends.length - b.friends.length)
+		.forEach((user) => result.push(user.name));
+	return result;
 };
 
 console.log(getNamesSortedByFriendsCount(users));
@@ -242,9 +250,10 @@ console.log('==== task 6.10 ====');
 // Получить массив всех умений всех пользователей (поле skills), при этом не должно быть повторяющихся умений и они должны быть отсортированы в алфавитном порядке.
 
 const getSortedUniqueSkills = (users) => {
-	// твой код
+	let result = [];
+	users.forEach((user) => result.push(...user.skills));
+	return [...new Set(result.sort())];
 };
 
 console.log(getSortedUniqueSkills(users));
 // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
-*/
